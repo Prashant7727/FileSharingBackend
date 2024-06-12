@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/', router);
+
+const PORT = process.env.PORT || 8000;
 app.get("/", (req, res) => {
     res.send("<h1>Welcome to ecommerce app</h1>");
   });
-const PORT = process.env.PORT || 8000;
-
 DBConnection();
 
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
