@@ -13,7 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/', router);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
+
 app.get("/", (req, res) => {
     res.send("<h1>Welcome to file-sharing app</h1>");
   });
