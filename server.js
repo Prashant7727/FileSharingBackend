@@ -20,8 +20,4 @@ app.get("/", (req, res) => {
 });
 DBConnection();
 
-app.listen(PORT, () => {
-  console.log(
-    `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`
-  );
-});
+app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
